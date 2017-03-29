@@ -55,6 +55,20 @@ evutil_secure_rng_global_setup_locks_(const int enable_locks)
 	return 0;
 }
 
+void
+arc4random_buf(void *_buf, size_t n)
+{
+    //unsigned char *buf = _buf;
+    //_ARC4_LOCK();
+    //arc4_stir_if_needed();
+    //while (n--) {
+    //	if (--arc4_count <= 0)
+    //		arc4_stir();
+    //	buf[n] = arc4_getbyte();
+    //}
+    //_ARC4_UNLOCK();
+}
+
 static void
 ev_arc4random_buf(void *buf, size_t n)
 {
